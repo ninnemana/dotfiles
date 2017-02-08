@@ -1,0 +1,8 @@
+#!/bin/bash
+function take_photo () {
+  DATE_STRING=`date '+%Y_%m_%d-%H_%M_%S'`
+  imagesnap -q "${HOME}/commit_images/${USER}-${DATE_STRING}.jpg"
+}
+
+take_photo
+echo "got a pic of you coding :)"

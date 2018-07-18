@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+function code() {
+	/opt/visual-studio-code-insiders/bin/code-insiders "$@"
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
@@ -7,4 +11,19 @@ function mkd() {
 
 function dash() {
 	open dash://"$@"
+}
+
+work () {
+    case "$1" in
+        ("prod") echo "Setting environment to production"
+            gcloud config set project platform-prod-156220
+            kubectl config use-context gke_platform-prod-156220_us-east1-d_tonka-production-cluster ;;
+        ("dev") echo "Setting environment to development"
+            gcloud config set project fusion-dev-163815
+            kubectl config use-context gke_fusion-dev-163815_us-east1-b_tonka-dev-cluster ;;
+        (*) echo "Setting environment to workstation"
+            gcloud config set project powerchord-dx
+            kubectl config use-context gke_powerchord-dx_us-central1-a_ninnemana
+            source $HOME/tmp/exports.sh ;;
+    esac
 }

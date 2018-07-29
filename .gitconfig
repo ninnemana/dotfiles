@@ -180,3 +180,5 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[user]
+	signingkey = AC5D3C7E352607C9

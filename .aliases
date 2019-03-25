@@ -1,6 +1,5 @@
 #!/bin/bash
 
-alias code="/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code"
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -157,5 +156,11 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Kubernetes kubectl alias for laziness
 alias kb="kubectl"
+alias k="kb"
+
+alias tf="terraform"
+
+### CampMinder Environment Scoping
+alias cm="source $HOME/tmp/campminder/creds.sh"
 
 alias cat="ccat"

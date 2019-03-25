@@ -6,6 +6,12 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 filetype plugin indent on    " required
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" on pressing tab, insert 4 spaces
+set expandtab
 
 "
 " Settings
@@ -90,6 +96,22 @@ set ttimeoutlen=10
 " Better Completion
 set complete=.,w,b,u,t
 set completeopt=longest,menuone
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+" open omni completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+            \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" open user completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+            \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+
 
 if &history < 1000
   set history=50
@@ -500,17 +522,21 @@ let g:vim_json_syntax_conceal = 0
 " ==================== Completion =========================
 " use deoplete for Neovim.
 if has('nvim')
+  let g:SuperTabDefaultCompletionType = '<c-n>'
   let g:deoplete#enable_at_startup = 1
+  let g:deoplete#auto_complete_start_length = 1
   let g:deoplete#ignore_sources = {}
   let g:deoplete#ignore_sources._ = ['buffer', 'member', 'tag', 'file', 'neosnippet']
   let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
   let g:deoplete#sources#go#align_class = 1
 
+  inoremap <expr><tab> pumvisible()? "\<c-n>" : "\<tab>"
+  autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
   " Use partial fuzzy matches like YouCompleteMe
-  call deoplete#custom#set('_', 'matchers', ['matcher_fuzzy'])
-  call deoplete#custom#set('_', 'converters', ['converter_remove_paren'])
-  call deoplete#custom#set('_', 'disabled_syntaxes', ['Comment', 'String'])
+  " call deoplete#custom#set('_', 'matchers', ['matcher_fuzzy'])
+  " call deoplete#custom#set('_', 'converters', ['converter_remove_paren'])
+  " call deoplete#custom#set('_', 'disabled_syntaxes', ['Comment', 'String'])
 endif
 
 " ==================== vim-multiple-cursors ====================

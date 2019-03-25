@@ -79,8 +79,6 @@ brew "wget"
 brew "youtube-dl"
 brew "z"
 brew "zopfli"
-brew "go-delve/delve/delve"
-brew "homebrew/php/php56", args: ["with-gmp"]
 cask "airflow"
 cask "alfred"
 cask "atom"

@@ -6,7 +6,7 @@ import subprocess
 from collections import OrderedDict
 
 from .base import Base
-from deoplete.util import charpos2bytepos, error, expand, getlines, load_external_module
+from deoplete.util import charpos2bytepos, expand, getlines, load_external_module
 
 load_external_module(__file__, 'sources/deoplete_go')
 from cgo import cgo
@@ -55,6 +55,10 @@ class Source(Base):
             vars.get('deoplete#sources#go#gocode_sock', '')
         self.cgo = \
             vars.get('deoplete#sources#go#cgo', False)
+        self.source_importer = \
+            vars.get('deoplete#sources#go#source_importer', False)
+        self.builtin_objects = \
+            vars.get('deoplete#sources#go#builtin_objects', False)
 
         self.loaded_gocode_binary = False
         self.complete_pos = re.compile(r'\w*$|(?<=")[./\-\w]*$')
@@ -108,7 +112,7 @@ class Source(Base):
 
         try:
             if result[1][0]['class'] == 'PANIC':
-                error(self.vim, 'gocode panicked')
+                self.print_error('gocode panicked')
                 return []
 
             if self.sort_class:
@@ -206,7 +210,14 @@ class Source(Base):
         if self.goarch != '':
             env['GOARCH'] = self.goarch
 
-        args = [self.find_gocode_binary(), '-f=json']
+        gocode = self.find_gocode_binary()
+        if not gocode:
+            return []
+        args = [gocode, '-f=json']
+        if self.source_importer:
+            args.append('-source')
+        if self.builtin_objects:
+            args.append('-builtin')
         # basically, '-sock' option for mdempsky/gocode.
         # probably meaningless in nsf/gocode that already run the rpc server
         if self.sock != '' and self.sock in ['unix', 'tcp', 'none']:
@@ -226,14 +237,25 @@ class Source(Base):
             '\n'.join(buffer).encode()
         )
 
-        return loads(stdout_data.decode())
+        result = []
+        try:
+            result = loads(stdout_data.decode())
+        except Exception as e:
+            self.print_error('gocode decode error')
+            self.print_error(stdout_data.decode())
+            self.print_error(stderr_data.decode())
+        return result
 
     def get_cursor_offset(self, context):
         line = self.vim.current.window.cursor[0]
         column = context['complete_position']
-
-        return self.vim.call('line2byte', line) + \
-            charpos2bytepos('utf-8', context['input'][: column], column) - 1
+        count = self.vim.call('line2byte', line)
+        if self.vim.current.buffer.options['fileformat'] == 'dos':
+            # Note: line2byte() counts "\r\n" in DOS format.  It must be "\n"
+            # in gocode.
+            count -= line - 1
+        return count + charpos2bytepos(
+            'utf-8', context['input'][: column], column) - 1
 
     def parse_import_package(self, buffer):
         start = 0
@@ -269,17 +291,13 @@ class Source(Base):
         if self.gocode_binary != '' and self.loaded_gocode_binary:
             return self.gocode_binary
 
-        try:
-            if os.path.isfile(self.gocode_binary):
-                self.loaded_gocode_binary = True
-                return self.gocode_binary
-            else:
-                raise
-        except Exception:
-            if platform.system().lower() == 'windows':
-                return self.find_binary_path('gocode.exe')
-            else:
-                return self.find_binary_path('gocode')
+        self.loaded_gocode_binary = os.path.isfile(self.gocode_binary)
+        if self.loaded_gocode_binary:
+            return self.gocode_binary
+        elif platform.system().lower() == 'windows':
+            return self.find_binary_path('gocode.exe')
+        else:
+            return self.find_binary_path('gocode')
 
     def find_binary_path(self, path):
 
@@ -296,4 +314,4 @@ class Source(Base):
                 binary = os.path.join(p, path)
                 if is_exec(binary):
                     return binary
-        return error(self.vim, path + ' binary not found')
+        return self.print_error(path + ' binary not found')

@@ -161,7 +161,4 @@ alias k="kb"
 
 alias tf="terraform"
 
-### CampMinder Environment Scoping
-alias cm="source $HOME/tmp/campminder/creds.sh"
-
 alias cat="ccat"

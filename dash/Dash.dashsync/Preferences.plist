@@ -61,7 +61,7 @@
 			<key>cloud.google.com/go</key>
 			<dict>
 				<key>date</key>
-				<date>2019-04-30T12:38:06Z</date>
+				<date>2019-10-07T15:34:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -75,7 +75,7 @@
 			<key>cloud.google.com/go/datastore</key>
 			<dict>
 				<key>date</key>
-				<date>2019-04-29T05:37:48Z</date>
+				<date>2019-10-07T15:34:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -89,7 +89,7 @@
 			<key>cloud.google.com/go/trace</key>
 			<dict>
 				<key>date</key>
-				<date>2019-04-30T12:38:06Z</date>
+				<date>2019-10-07T15:34:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -100,10 +100,38 @@
 					<string>cloud.google.com/go/trace</string>
 				</dict>
 			</dict>
+			<key>github.com/hashicorp/vault/api</key>
+			<dict>
+				<key>date</key>
+				<date>2019-10-04T15:34:29Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/hashicorp/vault/api</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/hashicorp/vault/api</string>
+				</dict>
+			</dict>
+			<key>github.com/stretchr/testify/assert</key>
+			<dict>
+				<key>date</key>
+				<date>2019-09-25T15:05:50Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/stretchr/testify/assert</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/stretchr/testify/assert</string>
+				</dict>
+			</dict>
 			<key>go.opencensus.io</key>
 			<dict>
 				<key>date</key>
-				<date>2019-04-30T12:38:06Z</date>
+				<date>2019-10-02T15:34:33Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -174,7 +202,7 @@
 			<key>Kubernetes</key>
 			<dict>
 				<key>date</key>
-				<date>2019-03-12T15:29:22Z</date>
+				<date>2019-09-25T15:05:44Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -197,7 +225,7 @@
 			<key>Terraform</key>
 			<dict>
 				<key>date</key>
-				<date>2019-03-12T15:29:30Z</date>
+				<date>2019-09-25T15:05:51Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -239,12 +267,12 @@
 			<key>http://kapeli.com/feeds/React.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-07-29T05:21:16Z</date>
+				<date>2019-05-09T19:04:57Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/VueJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-07-29T05:21:20Z</date>
+				<date>2019-05-09T19:04:57Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>

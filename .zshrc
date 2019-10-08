@@ -51,8 +51,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # autoload -U compinit && compinit
 
-source /Users/ninnemana/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/ninnemana/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=187'
 
@@ -77,3 +77,5 @@ PURE_CMD_MAX_EXEC_TIME=10
 
 prompt pure
 export GPG_TTY=$(tty)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

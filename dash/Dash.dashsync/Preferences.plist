@@ -61,7 +61,7 @@
 			<key>cloud.google.com/go</key>
 			<dict>
 				<key>date</key>
-				<date>2019-10-07T15:34:29Z</date>
+				<date>2019-11-27T02:05:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -75,7 +75,7 @@
 			<key>cloud.google.com/go/datastore</key>
 			<dict>
 				<key>date</key>
-				<date>2019-10-07T15:34:29Z</date>
+				<date>2019-11-27T02:05:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -89,7 +89,7 @@
 			<key>cloud.google.com/go/trace</key>
 			<dict>
 				<key>date</key>
-				<date>2019-10-07T15:34:29Z</date>
+				<date>2019-11-27T02:05:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -103,7 +103,7 @@
 			<key>github.com/hashicorp/vault/api</key>
 			<dict>
 				<key>date</key>
-				<date>2019-10-04T15:34:29Z</date>
+				<date>2019-11-16T02:43:38Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -117,7 +117,7 @@
 			<key>github.com/stretchr/testify/assert</key>
 			<dict>
 				<key>date</key>
-				<date>2019-09-25T15:05:50Z</date>
+				<date>2019-11-16T02:43:38Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -131,7 +131,7 @@
 			<key>go.opencensus.io</key>
 			<dict>
 				<key>date</key>
-				<date>2019-10-02T15:34:33Z</date>
+				<date>2019-11-22T22:05:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -202,7 +202,7 @@
 			<key>Kubernetes</key>
 			<dict>
 				<key>date</key>
-				<date>2019-09-25T15:05:44Z</date>
+				<date>2019-11-20T18:53:07Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -225,7 +225,7 @@
 			<key>Terraform</key>
 			<dict>
 				<key>date</key>
-				<date>2019-09-25T15:05:51Z</date>
+				<date>2019-11-20T18:53:11Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>

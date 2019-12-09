@@ -162,3 +162,6 @@ alias k="kb"
 alias tf="terraform"
 
 alias cat="ccat"
+alias go="nocorrect go"
+alias python="python3"
+alias doc="docker-compose"

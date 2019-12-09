@@ -278,9 +278,6 @@ set -g mouse on
 # move status line to top
 set -g status-position top
 
-# setup | and _ for window splitting
-bind \ split-window -h
-bind - split-window -v
 unbind '"'
 unbind %
 

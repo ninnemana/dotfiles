@@ -9,7 +9,7 @@
 			<key>Kubernetes</key>
 			<dict>
 				<key>date</key>
-				<date>2018-11-18T01:44:38Z</date>
+				<date>2020-01-11T18:42:18Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -61,7 +61,7 @@
 			<key>cloud.google.com/go</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-09T16:15:06Z</date>
+				<date>2020-01-20T15:57:32Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -75,7 +75,7 @@
 			<key>cloud.google.com/go/datastore</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-09T16:15:06Z</date>
+				<date>2020-01-20T15:57:30Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -89,7 +89,7 @@
 			<key>cloud.google.com/go/trace</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-09T16:15:05Z</date>
+				<date>2020-01-20T15:57:30Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -103,7 +103,7 @@
 			<key>github.com/hashicorp/vault/api</key>
 			<dict>
 				<key>date</key>
-				<date>2019-11-12T16:08:57Z</date>
+				<date>2020-01-11T18:42:21Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -117,7 +117,7 @@
 			<key>github.com/stretchr/testify/assert</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-03T16:51:24Z</date>
+				<date>2020-01-20T15:57:30Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -131,7 +131,7 @@
 			<key>go.opencensus.io</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-09T16:15:08Z</date>
+				<date>2020-01-16T18:42:24Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -202,7 +202,7 @@
 			<key>Kubernetes</key>
 			<dict>
 				<key>date</key>
-				<date>2019-11-19T16:23:30Z</date>
+				<date>2019-12-17T22:53:43Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -225,7 +225,7 @@
 			<key>Terraform</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-03T16:52:08Z</date>
+				<date>2020-01-15T18:42:27Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -262,17 +262,17 @@
 			<key>http://kapeli.com/feeds/Go.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-07-29T05:20:55Z</date>
+				<date>2019-12-17T22:53:48Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/React.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-09T19:04:57Z</date>
+				<date>2019-12-17T22:53:46Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/VueJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-09T19:04:57Z</date>
+				<date>2019-12-17T22:53:46Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>

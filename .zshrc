@@ -32,7 +32,6 @@ plugins=(
   tmuxinator
   zsh-autosuggestions
   zsh-completions
-  zsh-wakatime
 )
 
 source $ZSH/oh-my-zsh.sh

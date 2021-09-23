@@ -77,4 +77,7 @@ PURE_CMD_MAX_EXEC_TIME=10
 prompt pure
 export GPG_TTY=$(tty)
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/awscli@1/bin:$PATH"
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+unsetopt correct_all

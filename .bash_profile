@@ -7,3 +7,5 @@ export PATH="$HOME/.rbenv/bin:/usr/local/sbin:$PATH"
 
 # rbenv
 eval "$(rbenv init -)"
+
+export PATH="$HOME/.cargo/bin:$PATH"

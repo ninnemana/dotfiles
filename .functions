@@ -8,3 +8,56 @@ function mkd() {
 function dash() {
 	open dash://"$@"
 }
+
+function _base() {
+	echo -n $@ | base64
+}
+
+function _unbase() {
+	echo -n $@ | base64 --decode
+}
+
+function start-dd() {
+	docker run -d --name datadog-agent \
+          -v /var/run/docker.sock:/var/run/docker.sock:ro \
+          -v /proc/:/host/proc/:ro \
+          -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
+          -e DD_API_KEY=553e9dcc41970f186809446b644c18a1 \
+          -e DD_APM_ENABLED=true \
+          -e DD_APM_NON_LOCAL_TRAFFIC=true \
+          -p 127.0.0.1:8126:8126/tcp \
+          datadog/agent:latest
+}
+
+function stop-dd() {
+	docker stop datadog-agent
+	docker rm datadog-agent
+}
+
+function w1() {
+	watch -n1 "$@"
+}
+
+function branch() {
+	git branch --show-current
+}
+
+function branches() {
+	git branch --sort=-committerdate | head -n 10
+}
+
+function dotenv() {
+	if [ ! -f .env ]
+	then
+		export $(cat .env | xargs)
+	fi
+}
+
+function capture() {
+    sudo dtrace -p "$1" -qn '
+        syscall::write*:entry
+        /pid == $target && arg0 == 1/ {
+            printf("%s", copyinstr(arg1, arg2));
+        }
+    '
+}

@@ -279,5 +279,5 @@ set -g mouse on
 set -g status-position top
 
 unbind '"'
-unbind %
+unbind "%"
 

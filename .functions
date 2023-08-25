@@ -61,3 +61,11 @@ function capture() {
         }
     '
 }
+
+function goland() {
+	open -na "/Applications/GoLand.app" --args "$@"
+}
+
+function zed () {
+  open -na "/Applications/Zed.app" --args "$@"
+}

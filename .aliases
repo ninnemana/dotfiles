@@ -159,11 +159,20 @@ alias path='echo -e ${PATH//:/\\n}'
 alias kb="kubectl"
 alias k="kb"
 
+alias pm="pulumi"
+
 alias tf="terraform"
 
+# podman
+#alias docker-compose="podman-compose"
+
 alias cat="ccat"
-alias go="nocorrect go"
+#alias go="nocorrect go"
 alias python="python3"
 alias doc="docker-compose"
 # alias docker="podman"
 alias pi="kubectl --context pi-cluster"
+
+alias vi="nvim"
+alias vim="nvim"
+alias docky="export DOCKER_HOST=unix://$HOME/.colima/default/docker.sock && colima -p true"

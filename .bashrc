@@ -2,3 +2,4 @@
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.zshrc
+. "$HOME/.cargo/env"

@@ -39,7 +39,7 @@ function w1() {
 }
 
 function branch() {
-	git branch --show-current
+	git branch --show-current | tr -d '\n'
 }
 
 function branches() {

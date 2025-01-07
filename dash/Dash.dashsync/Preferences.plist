@@ -9,7 +9,7 @@
 			<key>Kubernetes</key>
 			<dict>
 				<key>date</key>
-				<date>2021-03-02T16:21:00Z</date>
+				<date>2024-10-29T22:18:57Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -202,7 +202,7 @@
 			<key>Kubernetes</key>
 			<dict>
 				<key>date</key>
-				<date>2021-09-09T01:48:41Z</date>
+				<date>2024-10-29T22:18:58Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -225,7 +225,7 @@
 			<key>Terraform</key>
 			<dict>
 				<key>date</key>
-				<date>2021-09-09T01:50:34Z</date>
+				<date>2024-10-29T22:19:01Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -262,17 +262,17 @@
 			<key>http://kapeli.com/feeds/Go.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-17T22:53:48Z</date>
+				<date>2024-10-29T22:19:03Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/React.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-17T22:53:46Z</date>
+				<date>2024-10-29T22:19:01Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/VueJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-12-17T22:53:46Z</date>
+				<date>2024-10-29T22:19:08Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>

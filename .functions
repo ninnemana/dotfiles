@@ -38,6 +38,10 @@ function w1() {
 	watch -n1 "$@"
 }
 
+function kw1() {
+        watch -n1 "kubectl $@"
+}
+
 function branch() {
 	git branch --show-current | tr -d '\n'
 }
@@ -67,7 +71,7 @@ function goland() {
 }
 
 function zed () {
-  open -na "/Applications/Zed.app" --args "$@"
+  open -na "/Applications/Zed.app" "$@"
 }
 
 function fromutc () {

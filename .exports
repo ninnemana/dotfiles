@@ -11,7 +11,7 @@ export LC_ALL=$LANG;
 
 export NVM_DIR=$HOME/.nvm
 
-export GOROOT=$HOME/code/go/go
+export GOROOT=$HOME/code/go
 export GOPATH=$HOME/code/go/golibs
 export GOBIN=$GOROOT/bin
 export PATH=$GOBIN:$PATH
@@ -24,14 +24,17 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=/usr/libexec:$PATH
 
 # casks
-export PATH=/usr/local/Cellar:/usr/local/Caskroom:$PATH
+export PATH=/usr/local/Cellar:/usr/local/Caskroom:/opt/whalebrew/bin:$PATH
 
 # google-cloud-sdk
 export PATH=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH
 
 export KUBECONFIG=$HOME/.kube/config
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home
-export PATH=/usr/local/opt/openjdk/bin:$PATH
+export JAVA_HOME=/usr/local/opt/openjdk
+export PATH=/opt/homebrew/opt/openjdk@21/bin:$PATH
+
+# pipx
+export PATH=$HOME/.local/bin:$HOME/.local/pipx:$PATH
 
 # openssl
 export PATH=/usr/local/opt/openssl@3/bin:$PATH

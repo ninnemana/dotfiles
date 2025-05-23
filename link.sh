@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a links=("bash_profile" 
+declare -a links=("bash_profile"
                 "tmux.conf.local"
 		"aliases"
 		"functions"
@@ -10,7 +10,7 @@ declare -a links=("bash_profile"
 		"inputrc"
 		"curlrc"
 		"gitmodules"
-		"alacritty.yml"
+		"alacritty.toml"
 		"bash_prompt"
 		"gitattributes"
 		"gvimrc"
@@ -22,9 +22,16 @@ declare -a links=("bash_profile"
 		"exports"
 		"gitignore"
 		"hgignore"
+		"zprofile"
                 )
 
 for f in "${links[@]}"
 do
-   ln -s /Users/alexninneman/code/dotfiles/.${f} /Users/alexninneman/.${f}
+   ln -s /Users/ninnemana/code/dotfiles/.${f} /Users/ninnemana/.${f}
 done
+
+mkdir -p /Users/ninnemana/.config/ghostty
+ln -s /Users/ninnemana/code/dotfiles/ghostty/config /Users/ninnemana/.config/ghostty/config
+
+touch $HOME/.z
+

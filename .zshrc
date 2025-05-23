@@ -56,7 +56,7 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.z
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=187'
 
 # z
-. /usr/local/etc/profile.d/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
 
 # nvm
 source $(brew --prefix nvm)/nvm.sh
